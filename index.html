@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IHC - Pagina del videojuego y poyecto final del curso" />
+	<meta name="keywords" content="IHC, Sodogan, BrainDash" />
+	<meta name="author" content="BrainDash" />
+    <title>BrainDash</title>
+  <!--favicon-img--> 
+   <link rel="icon" type="image/png" href="images/favicon.png">
+   <!--favicon-img-->
+   <!--main css file should not be removed -->
+    <link rel="stylesheet" href="css/index.css">
+    <!--main css file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    #ATprogressbar{
+      position: fixed;
+      bottom: 26px;
+      right: 30px;
+      width:70px;
+      height: 70px;
+      border-radius: 50%;
+      z-index: 99;
+      display: grid;
+      place-items: center;
+      background:darkcyan;
+    }
+    #progressValue{
+      background:rgba(0,0,0,0.5);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;color: #ffffff;
+      display: grid;
+      place-items: center;font-size: 18px;
+      font-family:poppins;  
+    }
+    
+    </style>
+
+
+<body>
+    <!--contains all the div-->
+    <div id="all">
+        <!--mouse  follower-->
+        <div class="cursor"></div>
+        <!--mouse  follower-->
+        <!--loader-->
+        <div id="loader">
+            <span class="color">IHC</span>
+        </div>
+        <!--loader-end-->
+        <!--link-screen-->
+        <div id="breaker">
+        </div>
+        <div id="breaker-two">
+        </div>
+        <!--link-screen-->
+        
+        <!--Main-Section-->
+        <!--Navigator-fullscreen-->
+        <div id="navigation-content">
+            <div class="logo">
+                <img src="images/braindash-logo.png" alt="logo">
+            </div>
+            <div class="navigation-close">
+                <span class="close-first"></span>
+                <span class="close-second"></span>
+            </div>
+            <div class="navigation-links">
+                <a href="#" data-text="INICIO" id="home-link" >INICIO</a>
+                <a href="#" data-text="NOSOTROS" id="about-link" >NOSOTROS</a>
+                <a href="#" data-text="SODOGAN" id="sodogan-link" >VIDEOJUEGO</a>
+                <a href="#" data-text="BRAINDASH" id="braindash-link" >PROYECTO FINAL</a>
+            </div>  
+        </div>
+        <div class="color-changer">
+            <div class="color-panel">
+                <img src="images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Colores para daltónicos</div>
+                <div class="colors">
+                    <ul >
+                    <li>
+                        <a href="#0" class="color-red " title="color-red"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-purple" title="color-purple"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-green" title="color-green"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-blue" title="color-blue"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        <!--Navigator-Fullscreen END-->
+          <!--Home Page-->
+        <!--Menubar-->
+        <div id="navigation-bar">
+            <div class="logo"><img src="images/braindash-logo.png" alt="logo"></div>
+            <div class="menubar">
+                <span class="first-span"></span>
+                <span class="second-span"></span>
+                <span class="third-span"></span>
+            </div>
+        </div>
+        <!--Menubar End-->
+        <!--Header-->
+        <div id="header">
+            <div id="particles"></div>
+            <div class="header-content">
+                <div class="header-content-box">
+                    <div class="firstline">
+                        <span class="color">B</span>rain
+                        <span class="color">D</span>ash 
+                    </div>
+                    <div class="secondline">
+                    Introduciendo a 
+                        <span class="txt-rotate color" data-period="1200"data-rotate='[ " Sodogan.", " BrainDash." ]'></span>
+                        <span class="slash">|</span>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <!--Header End-->
+        <!--HomePage End-->
+        <!--Main-Section End-->
+        <!--about-->
+        <div id="about">
+            <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png" alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Colores para daltónicos</div>
+                    <div class="colors">
+                        <ul >
+                        <li>
+                            <a href="#0" class="color-red " title="color-red"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-purple" title="color-purple"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-green" title="color-green"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-blue" title="color-blue"></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            <!--about content-->
+            <div id="about-content">
+                <div class="about-header">
+                    Sobre <span class="color">Nosotros</span>
+                    <span class ="header-caption">Conocenos un poco <span class="color"> más</span></span>
+                </div>
+            </div>
+            <!--services start-->
+            <div id="services">
+            <!--services content-->
+            <div class="services-content">
+                <div class="service-one service wow">
+                    <div class="service-img">
+                        <img src="images/chamo.jpg" alt="service-one">
+                    </div>
+                    <div class="service-description">
+                        <h2>Jean Franco Cerpa</h2>
+                        <p>Diseño/Programación/VR</p>
+                        <a href="https://github.com/jeanfcg" target="_blank"><button class="follow-btn">Seguir</button></a>
+                    </div>
+                </div>
+                <div class="service-two service wow">
+                    <div class="service-img">
+                        <img src="images/owen-temporal.jpg" alt="service-two">
+                    </div>
+                    <div class="service-description">
+                        <h2>Owen Roque</h2>
+                        <p>Diseño/Programación/VR</p>
+                        <a href="https://github.com/jeanfcg" target="_blank"><button class="follow-btn">Seguir</button></a>
+                    </div>
+                </div>
+                <div class="service-three service wow">
+                    <div class="service-img">
+                        <img src="images/sebastian.jpg" alt="service-three">
+                    </div>
+                    <div class="service-description">
+                        <h2>Sebastián Zamalloa</h2>
+                        <p>Diseño/Programación/VR</p>
+                        <a href="https://github.com/dogezlv" target="_blank"><button class="follow-btn">Seguir</button></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--services content end-->
+            <!--services end-->
+            <!--copyright-section-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> BrainDash 2024
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+        <!--about end-->
+        <!--videogame-->
+        <div id="videogame">
+            <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png" alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Colores para daltónicos</div>
+                    <div class="colors">
+                        <ul >
+                        <li>
+                            <a href="#0" class="color-red " title="color-red"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-purple" title="color-purple"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-green" title="color-green"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-blue" title="color-blue"></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            <div class="portfolio-header"> <span class="color"> Videojuego VR: </span> Sodogan  
+                <span class ="header-caption"> Sodogan te sumerge en un combate de supervivencia futurista frenético. <br>
+                <span class="color"> Enfrenta oleadas de robots con tu katana, bláster y tus reflejos al <strong>límite</strong>.</span></span>
+            </div>
+            <div id="portfolio-content">
+                <div class="portfolio">
+                    <div class="portfolio-image">
+                        <img src="images/creacion-idea.jpg" alt="creacion-idea">
+                    </div>  
+                    <div class="portfolio-text">
+                        <h2>Creación de la Idea</h2>
+                        <p>
+                            Nos reunimos para discutir la idea de un juego en VR, partiendo de otros juegos exitosos y populares como Beat Saber.
+
+                            Acordamos realizar un juego similar, pero no basado en el ritmo de la música, sino mas bien de tipo supervivencia y futurista (tipo cyberpunk), 
+                            donde el objetivo del jugador sea de cortar y disparar a robots enemigos.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="portfolio-image">
+                        <img src="images/sketching.jpg" alt="sketching">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>Sketching</h2>
+                        <p>
+                            Realizamos los primeros bocetos del juego, como las interfaces, elementos como la katana y la pistola bláster, los drones enemigos.
+                            
+                            Se definió diversos indicadores de peligro/daño, nivel de vida y puntuación del jugador cuando pierde.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="portfolio-image">
+                        <img src="images/storyboard.jpg" alt="storyboard">
+                    </div>  
+                    <div class="portfolio-text">
+                        <h2>StoryBoard</h2>
+                        <p>
+                            Se definió el 'setting' o escenario del jugador, ya que tenía que ser futurista, así como los spawners. 
+                            
+                            Además, se optó por eliminar la opción de movilidad, para simplificar la movilidad en VR, y 
+                            enfocar al jugador completamente en la precisión y gestion de ataques simultáneos/combos.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="portfolio-image">
+                        <img src="images/maqueta.jpg" alt="prototipo de baja fidelidad">
+                    </div>  
+                    <div class="portfolio-text">
+                        <h2>Prototipo Inicial</h2>
+                        <p>
+                            Construimos un prototipo de baja fidelidad del juego, simulando la aparición de los dos tipos de drones enemigos, 
+                            así como las formas en que pueden ser destruidos, usando la katana o la pistola bláster.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="portfolio-image">
+                        <img src="images/evaluacion-prototipo.jpg" alt="prototipo: evaluacion">
+                    </div>  
+                    <div class="portfolio-text">
+                        <h2>Evaluación del Prototipo con Usuarios</h2>
+                        <p>
+                            Los usuarios probaron la dinámica de nuestro juego, dándonos feedback y sus opiniones 
+                            personales sobre las mecánicas del juego. Tomamos nota de ellas para mejorar la idea principal y comenzar el desarrollo del mismo.
+                        </p>
+                        <div class="button"><a href="https://drive.google.com/drive/folders/1dwnVo-Id0OLZUsRQgVh3znoqxbNhoUkE?usp=sharing"><button><span class="index"> GDrive <i class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+            </div>
+            <!--copyright-section-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> BrainDash 2024
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+        <!--videogame end-->
+
+        <!--final-project-->
+        <div id="final-project">
+            <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png" alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Colores para daltónicos</div>
+                    <div class="colors">
+                        <ul >
+                        <li>
+                            <a href="#0" class="color-red " title="color-red"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-purple" title="color-purple"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-green" title="color-green"></a>
+                        </li>
+                        <li>
+                            <a href="#0" class="color-blue" title="color-blue"></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            <div class="blog-header"> Proyecto Final: <i>BrainDash</i></span>
+                <span class ="header-caption"> 
+                    Una plataforma gamificada que transforma la distracción en <span class="color">atención activa</span> y refuerza el aprendizaje con <span class="color"><strong>puntos que hacen la diferencia.</strong></span>
+                </span>
+                <div class="wrapper">
+                    <div class="center-line">
+                      <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+                    </div>
+                    <div class="row row-1">
+                      <section>
+                        <i class="icon fas fa-home"></i>
+                        <div class="details">
+                          <span class="title">Propuesta de Proyecto</span>
+                          <span>24/10/2024</span>
+                        </div>
+                        <p>Identificamos la problemática y contexto para definir un público específico y objetivos para BrainDash.</p>
+                            <div class="botton-container">
+                                <div class="left-buttons">
+                                    <div class="bottom">
+                                        <a href="https://drive.google.com/file/d/1B7K-SNOSC8U6SOuk2qHnB-AMbIvwOJXT/view" target="_blank">Documento</a>
+                                    </div>
+                                </div>
+                                <div class="right-heart">
+                                    <i class="far fa-heart heart-icon"></i>
+                                </div>
+                            </div>
+                      </section>
+                    </div>
+                    <div class="row row-2">
+                        <section>
+                          <i class="icon fas fa-star"></i>
+                          <div class="details">
+                            <span class="title">Busqueda de necesidades</span>
+                            <span>14/11/2024</span>
+                          </div>
+                          <p>Nos pusimos en contacto con diversas personas para conversar sobre las distracciones que enfrentan en su día 
+                            a día en clases y obtuvimos información valiosa que se convirtió en la base de BrainDash.</p>
+                            <div class="botton-container">
+                                <div class="left-buttons">
+                                    <div class="bottom">
+                                        <a href="https://www.canva.com/design/DAGVJSJd_4E/KzIIuahuMSHiNTDtSs-pZA/edit?utm_content=DAGVJSJd_4E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">PPT</a>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="https://drive.google.com/drive/folders/1vj74n0G2u6loBtG6kmq1qgntkFKKbqKU?usp=sharing" target="_blank">Anexos</a>
+                                    </div>
+                                </div>
+                                <div class="right-heart">
+                                    <i class="far fa-heart heart-icon"></i>
+                                </div>
+                            </div>
+                        </section>
+                      </div>
+                      <div class="row row-1">
+                        <section>
+                          <i class="icon fas fa-rocket"></i>
+                          <div class="details">
+                            <span class="title">Storyboard</span>
+                            <span>21/11/2024</span>
+                          </div>
+                          <p>Nuestra visión de BrainDash empezó a tomar forma cuando imaginamos cómo las personas podrían 
+                            mejorar sus habilidades cognitivas a través de una interfaz de usuario llamativa.</p>
+                            <div class="botton-container">
+                                <div class="left-buttons">
+                                    <div class="bottom">
+                                        <a href="https://www.canva.com/design/DAGXFM45bTU/NYrXyDJh-R89HS58_u7oAg/view?utm_content=DAGXFM45bTU&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">PPT</a>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="https://drive.google.com/drive/folders/1yAKVWtrNU1oM-vTV_S1yt6R8idDMQWCj?usp=sharing" target="_blank">Anexos</a>
+                                      </div>
+                                </div>
+                                <div class="right-heart">
+                                    <i class="far fa-heart heart-icon"></i>
+                                </div>
+                            </div>
+                        </section>
+                      </div>
+                      <div class="row row-2">
+                        <section>
+                          <i class="icon fas fa-globe"></i>
+                          <div class="details">
+                            <span class="title">MOCKUPS</span>
+                            <span>28/11/2024</span>
+                          </div>
+                          <p>De nuestras mentes a la página, las pantallas interactivas empezaron a dar 
+                            vida a BrainDash con el feedback del usuario.</p>
+                            <div class="botton-container">
+                                <div class="left-buttons">
+                                    <div class="bottom">
+                                        <a href="https://www.canva.com/design/DAGXdBr_I_o/46pA4FgUc-qzYqDwuU8Phw/view?utm_content=DAGXdBr_I_o&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">PPT</a>
+                                    </div>
+                                    <div class="bottom">
+                                        <a href="https://drive.google.com/drive/folders/1RqjqdET4Rc5XsqcXDIj0E7QN2czlp01K?usp=sharing" target="_blank">Anexos</a>
+                                    </div>
+                                </div>
+                                <div class="right-heart">
+                                    <i class="far fa-heart heart-icon"></i>
+                                </div>
+                            </div>
+                        </section>
+                      </div>
+                      <div class="row row-1">
+                        <section>
+                          <i class="icon fas fa-user"></i>
+                          <div class="details">
+                            <span class="title">Definición de Personas</span>
+                            <span>05/12/2024</span>
+                          </div>
+                          <p>Se definio nuestros diferentes tipos de personas para la aplicación, primaria, secundaria, terciaria y anti-persona</p>
+                          <div class="botton-container">
+                            <div class="left-buttons">
+                                <div class="bottom">
+                                    <a href="https://www.canva.com/design/DAGYHM-MFuM/fPVM9oP_flqiHEEXZBqk1Q/view?utm_content=DAGYHM-MFuM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5434d438f6" target="_blank">PPT</a>
+                                </div>
+                            </div>
+                            <div class="right-heart">
+                                <i class="far fa-heart heart-icon"></i>
+                            </div>
+                        </div>
+                        </section>
+                      </div>
+                      <div class="row row-2">
+                        <section>
+                          <i class="icon fas fa-paper-plane"></i>
+                          <div class="details">
+                            <span class="title">Prototipo de alta fidelidad</span>
+                            <span>15/12/2024</span>
+                          </div>
+                          <p>Nuestros diferentes tipos de personas (usuarios) probaron por primera vez nuestro prototipo de alta fidelidad, y recibimos el feedback de cada uno de ellos.</p>
+                          <div class="botton-container">
+                            <div class="left-buttons">
+                                <div class="bottom">
+                                    <a href="https://drive.google.com/drive/folders/19IH9F6Qtog00OCoa4B57Jv8wX5yeSWCO" target="_blank">Anexos</a>
+                                </div>
+                            </div>
+                            <div class="right-heart">
+                                <i class="far fa-heart heart-icon"></i>
+                            </div>
+                        </div>
+                        </section>
+                      </div>
+                    </div>
+               <!--copyright-section You Can Remove After Downloading-->
+               <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> BrainDash 2024  
+                </div>
+               </div>
+
+
+
+            
+       <!--copyright-section-->
+        </div>
+        <!--final-project end-->
+    </div>
+    <div id ='ATprogressbar' onclick="window.scrollTo(0,0)">
+        <span id ='progressValue'></span>
+      </div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const heartIcons = document.querySelectorAll(".heart-icon");
+            
+            heartIcons.forEach((heartIcon) => {
+                heartIcon.addEventListener("click", () => {
+                    if (heartIcon.classList.contains("far")) {
+                        heartIcon.classList.remove("far");
+                        heartIcon.classList.add("fas", "solid");
+                    } else {
+                        heartIcon.classList.remove("fas", "solid");
+                        heartIcon.classList.add("far");
+                    }
+                });
+            });
+        });
+    </script>
+
+      <script>
+        let ATscrollProgress = () =>{
+      let scrollProgress = document.getElementById("ATprogressbar");
+      let progressValue = document.getElementById("progressValue");
+      let pos = document.documentElement.scrollTop;
+      let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollvalue = Math.round( pos * 100 / calcHeight);
+      scrollProgress.style.background = ` conic-gradient(#739c9c ${scrollvalue}%, #0b4f52 ${scrollvalue}%)`;
+      progressValue.textContent = `${scrollvalue}%`;
+      
+      
+        }
+        window.onscroll= ATscrollProgress;
+        window.onload =ATscrollProgress;
+      </script>
+
+
+    <!--all the divisions-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/index.js"></script>
+    <!--particles script-->
+    <script>
+  particlesJS("particles", {"particles":{"number":{"value":40,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
+
+</body>
+</html>
